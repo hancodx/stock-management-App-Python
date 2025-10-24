@@ -91,7 +91,7 @@ The `populate_database.py` script adds sample data automatically:
 
 ---
 
-## ⚙️ How to Run
+## - How to Run
 
 ### Clone the repository
 ```bash
