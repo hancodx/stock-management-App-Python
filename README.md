@@ -5,13 +5,13 @@ This project was developed as part of the **MTI (Méthodes et Techniques Informa
 
 ---
 
-## 📘 Overview
+## - Overview
 The **Stock Management App** allows users to manage inventory easily through a graphical interface.  
 It supports authentication, product and category management, and database persistence — all structured using a clean MVC architecture.
 
 ---
 
-## 🧠 Key Features
+## - Key Features
 ✅ User authentication (login/register)  
 ✅ Manage product categories  
 ✅ Add, edit, delete, and view products  
@@ -22,7 +22,7 @@ It supports authentication, product and category management, and database persis
 
 ---
 
-## 🏗️ Architecture & Design Patterns
+## - Architecture & Design Patterns
 
 The project follows an **MVC (Model–View–Controller)** architecture.
 
@@ -32,7 +32,7 @@ The project follows an **MVC (Model–View–Controller)** architecture.
 | **View** | Represents the user interface (Tkinter or templates if GUI/web version). |
 | **Controller** | Acts as a bridge between models and views, containing the business logic. |
 
-### 📂 Controllers
+### - Controllers
 Each controller manages a specific part of the application:
 - **`auth_controller.py`** – Manages user authentication (login, register).  
 - **`category_controller.py`** – Handles CRUD operations for product categories.  
@@ -42,7 +42,7 @@ Each controller manages a specific part of the application:
 
 ---
 
-## 🗃️ Database Design
+## - Database Design
 
 The database uses **SQLite3** and is automatically created as `stock_management.db` in the root directory.
 
@@ -73,7 +73,7 @@ The database uses **SQLite3** and is automatically created as `stock_management.
 
 ---
 
-## 💾 Example Database Content
+## - Example Database Content
 The `populate_database.py` script adds sample data automatically:
 ### Categories
 - Sacs à main  
