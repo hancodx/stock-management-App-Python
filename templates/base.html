@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gestion des Produits</title>
+    <link rel="stylesheet" href="/static/css/styles.css"> <!-- Lien vers votre fichier CSS -->
+</head>
+<body>
+    <!-- En-tête ou barre de navigation -->
+    <header>
+        <nav>
+            <ul>
+                <li><a href="/">Accueil</a></li>
+                <li><a href="/products">Produits</a></li>
+                <li><a href="/add_product">Ajouter un produit</a></li>
+                <li><a href="/login">Connexion</a></li>
+                <li><a href="/register">S'inscrire</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Contenu spécifique à chaque page -->
+    <main>
+        {% block content %}
+        <!-- Le contenu de chaque page spécifique sera injecté ici -->
+        {% endblock %}
+    </main>
+
+    <!-- Pied de page -->
+    <footer>
+        <p>&copy; 2024 Votre Entreprise</p>
+    </footer>
+</body>
+</html>

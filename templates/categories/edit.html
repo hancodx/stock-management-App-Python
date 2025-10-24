@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Modifier une catégorie</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.0.3/dist/tailwind.min.css" rel="stylesheet">
+</head>
+<body class="bg-gray-100">
+    <div class="container mx-auto p-8">
+        <h1 class="text-3xl font-bold mb-4">Modifier une catégorie</h1>
+        <a href="/categories" class="bg-blue-500 text-white px-4 py-2 rounded mb-4 inline-block">Retour à la liste des catégories</a>
+        <form action="/edit-category/{{ category[0] }}" method="POST" class="bg-white p-6 rounded-lg shadow-md">
+            <div class="mb-4">
+                <label for="name" class="block text-gray-700">Nom de la catégorie</label>
+                <input type="text" id="name" name="name" value="{{ category[1] }}" class="w-full border border-gray-300 p-2 rounded-lg" required>
+            </div>
+            <button type="submit" class="bg-green-500 text-white px-4 py-2 rounded">Enregistrer les modifications</button>
+        </form>
+    </div>
+</body>
+</html>

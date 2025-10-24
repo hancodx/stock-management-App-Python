@@ -1,0 +1,50 @@
+<!-- templates/products/add-product.html -->
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ajouter un Produit</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.0.3/dist/tailwind.min.css" rel="stylesheet">
+</head>
+<body class="bg-gray-100">
+
+    <!-- Conteneur principal -->
+    <div class="max-w-4xl mx-auto p-6">
+        <!-- Titre de la page -->
+        <h1 class="text-3xl font-bold text-indigo-600 mb-6">Ajouter un Produit</h1>
+
+        <!-- Formulaire d'ajout de produit -->
+        <form action="/add-product" method="POST" enctype="multipart/form-data" class="space-y-6">
+            <div>
+                <label for="name" class="block text-gray-700">Nom du produit</label>
+                <input type="text" id="name" name="name" required class="w-full px-4 py-3 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-2 focus:ring-indigo-500">
+            </div>
+            <div>
+                <label for="price" class="block text-gray-700">Prix</label>
+                <input type="number" id="price" name="price" required step="0.01" class="w-full px-4 py-3 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-2 focus:ring-indigo-500">
+            </div>
+            <div>
+                <label for="stock" class="block text-gray-700">Stock</label>
+                <input type="number" id="stock" name="stock" required class="w-full px-4 py-3 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-2 focus:ring-indigo-500">
+            </div>
+            <!-- <div>
+                <label for="category_id" class="block text-gray-700">Catégorie</label>
+                <select id="category_id" name="category_id" required class="w-full px-4 py-3 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-2 focus:ring-indigo-500">
+                    <option value="" disabled selected>Choisissez une catégorie</option>
+                    {% for category in categories %}
+                        <option value="{{ category[0] }}">{{ category[1] }}</option>
+                    {% endfor %}
+                </select>
+            </div> -->
+            <div>
+                <label for="image_path" class="block text-gray-700">Image</label>
+                <input type="file" id="image_path" name="image_path" accept="image/*" required class="w-full px-4 py-3 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-2 focus:ring-indigo-500">
+            </div>
+
+            <button type="submit" class="w-full px-6 py-3 text-white bg-green-600 rounded-md hover:bg-green-700 transition duration-300">Ajouter le Produit</button>
+        </form>
+    </div>
+
+</body>
+</html>
